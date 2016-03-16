@@ -7,12 +7,21 @@
   <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
   <script>
     $(function(){
-      
+    
+    
       // Without modifying any HTML, make the character count
       // show how many characters are remaining (starting from 40).
       // The text and input's border color should
       // turn red when the number is negative.
-      
+      $('h1').keyup(function(){
+       var userInput= $('input').val().length;
+       if(userInput > 40){
+        
+         $('h1').css('color','red');
+       }else{
+         $('h1').css('color','black');
+       }
+      });
       
       
     });
